@@ -1,4 +1,4 @@
-**\*\*Robot Tour Movement Data Sheet:\*\***
+**Robot Tour Movement Data Sheet:**
 
 Disclaimers: 
 
@@ -8,8 +8,8 @@ Disclaimers:
 
 | Situation: | Before: | After: | Code: |
 | :---- | :---- | :---- | ----- |
-| **\*\*→ first move:\*\*** Positioned in the middle of the grid | ![image1](images/image1.png) | ![image2](images/image2.png) | forward(25); |
-| **\*\*→ first move:\*\*** Positioned in the middle of the grid | ![image3](images/image3.png) | ![image4](images/image4.png) | forwardUntil(17); |
+| **→ first move:** Positioned in the middle of the grid | ![image1](images/image1.png) | ![image2](images/image2.png) | forward(25); |
+| **→ first move:** Positioned in the middle of the grid | ![image3](images/image3.png) | ![image4](images/image4.png) | forwardUntil(17); |
 | Positioned in the middle of the grid | ![image5](images/image5.png) | ![image6](images/image6.png) | until(17); |
 | Positioned to the middle of the box before turning to move a bottle | ![image7](images/image7.png) | ![image8](images/image8.png) | forward(25); right(); / left(); |
 | Positioned to the middle of the box before turning to move a bottle | ![image9](images/image9.png) | ![image10](images/image10.png) | forwardUntil(17); right(); / left(); |
