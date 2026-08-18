@@ -1,10 +1,10 @@
 # bths scioly robot tour 2025-2026
-An autonomous robot developed for BTHS Science Olympiad'ss Robot Tour during the **2025–2026** season.
+An autonomous robot developed for BTHS Science Olympiad during the **2025–2026** season.
 
-The system combines  odometry, distance sensing, and careful calibration to navigate a competition course and interact with objects under strict time and dimensional constraints.
+The system combines odometry, distance-sensing, and careful calibration to navigate a competition course and interact with objects under strict time and dimensional constraints.
 #
 
-![robot.png](assets\robot.png)
+![Robot Tour robot](assets/robot.png)
 
 ## Overview
 <u>Robot Tour</u> requires an autonomous vehicle to navigate a predefined course, interact with objects, and complete a sequence of movements accurately within a specified amount of time.
@@ -29,12 +29,30 @@ The controller compares the measured yaw against a target heading:
 
 &emsp; **yaw error = target heading − measured heading**
 
-If the robot begins to deviate from it target heading, the motor speeds adjust to correct the trajectory. 
+If the robot begins to stray from its target heading, the motor speeds adjust asymmetrically to correct the trajectory. 
 
 The same feedback loop is also used during turns. The robot progressively reduces its turning speed as it approaches a target heading, allowing it to settle within approximately a one-dgree tolerance during calibration.
 
 ## Calibration
-Because the robot operates under physical constraints 
+Because the robot operates under physical constraints, software constants can't be treated as universally fixed values.
+
+I'm considerating factors, such as robot dimensions, wheel diameter, motor characteristics, battery voltage, surface friction, alignment, and sensor offsets. So therefore I calibrated movement systems aroiudn the physical robot.
+
+This repository includes a [Robot Tour Data Sheet](Robot-Tour-Data-Sheet.md) documenting measured movements and the corresponding movement commands that we commonly need for competitions.
+
+The calibration data covers:
+* Forward movement
+* Distance-based approaches
+* Distance-based corrections
+* 90° turns
+* 180° turns
+* Positioning relative to course objects
+
+The goal was not simply to make the robot complete one route, but to develop reusable movement primitives that could be calibrated and integrated into different tracks.
+
+## Movement Glossary
+| Situation: | Before: | After: | Code: |
+| :---- | :---- | :---- | ----- |
 <!--
 **constructed following the 2025-2026 SciOly build parameters:** [Link](https://drive.google.com/file/d/1CcOrLIdCGCBEwNyRmbU7zTlQBbmRYcFV/view)
 
