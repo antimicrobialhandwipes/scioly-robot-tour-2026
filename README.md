@@ -1,4 +1,4 @@
-# BTHS Science Olympiad — Robot Tour 2025–2026
+#scioly robot tour 2025-2026
 An autonomous robot developed for BTHS Science Olympiad during the **2025–2026** season.
 
 The system combines odometry, distance-sensing, and careful calibration to navigate a competition course and interact with objects under strict time and dimensional constraints.
